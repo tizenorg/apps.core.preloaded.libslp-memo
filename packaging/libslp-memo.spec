@@ -5,6 +5,7 @@ Release:    1
 Group:      Libraries
 License:    Samsung Proprietary License
 Source0:    libslp-memo-%{version}.tar.gz
+Source1001: packaging/libslp-memo.manifest 
 BuildRequires:  pkgconfig(dlog)
 BuildRequires:  pkgconfig(vconf)
 BuildRequires:  pkgconfig(db-util)
@@ -26,6 +27,7 @@ Development files for %{name}
 %setup -q
 
 %build
+cp %{SOURCE1001} .
 export LDFLAGS+=" -Wl,--rpath=/usr/lib -Wl,--as-needed -Wl,--hash-style=both"
 cmake . -DCMAKE_INSTALL_PREFIX=/usr
 
@@ -50,10 +52,12 @@ chmod 660  /opt/dbspace/.memo.db
 chmod 660  /opt/dbspace/.memo.db-journal
 
 %files
+%manifest libslp-memo.manifest
 %{_libdir}/*.so.*
 %attr(660,root,db_memo) /opt/data/libslp-memo/.LIBSLP_MEMO_DB_CHANGED
 
 %files devel
+%manifest libslp-memo.manifest
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/memo.pc
 %{_includedir}/*.h
