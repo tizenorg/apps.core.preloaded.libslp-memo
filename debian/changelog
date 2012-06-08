@@ -1,0 +1,7 @@
+libslp-memo (0.1.4-20) unstable; urgency=low
+
+  * Change memo package path
+  * Git: apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.4-20
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 16 Jan 2012 13:24:15 +0800

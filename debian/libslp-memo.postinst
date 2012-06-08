@@ -1,0 +1,23 @@
+#!/bin/sh
+
+#add db
+sqlite3 /opt/dbspace/.memo.db 'PRAGMA journal_mode = PERSIST;
+CREATE TABLE if not exists memo ( id INTEGER PRIMARY KEY autoincrement, content TEXT, written_time TEXT, create_time INTEGER, modi_time INTEGER, delete_time INTEGER, doodle INTEGER, color INTEGER, comment TEXT, favorite INTEGER, font_respect INTEGER, font_size INTEGER, font_color INTEGER, doodle_path TEXT );
+                              '
+
+if [ ${USER} = "root" ]
+then
+        vconftool set -t int db/memo/data-change 0 -g 5000
+# Change file owner
+        chown :6009 /opt/dbspace/.memo.db
+        chown :6009 /opt/dbspace/.memo.db-journal
+        chown :6009 /opt/data/libslp-memo/.LIBSLP_MEMO_DB_CHANGED
+else
+        vconftool set -t int db/memo/data-change 0
+fi
+# Change file permissions
+                
+        chmod 660  /opt/dbspace/.memo.db
+        chmod 660  /opt/dbspace/.memo.db-journal
+        chmod 660  /opt/data/libslp-memo/.LIBSLP_MEMO_DB_CHANGED
+

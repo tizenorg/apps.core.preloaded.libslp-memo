@@ -1,0 +1,26 @@
+Source: libslp-memo
+Section: libs
+Priority: extra
+Maintainer: Zhou Zhibin <zhibin.zhou@samsung.com>, Lu Canjiang <canjiang.lu@samsung.com>
+Build-Depends: debhelper (>= 5), libslp-db-util-dev, dlog-dev, libheynoti-dev, libvconf-dev
+Standards-Version: 0.1.0
+
+Package: libslp-memo-dev
+Section: libs
+Architecture: any
+XB-Generate-Docs: no
+XB-Public-Package: no
+Depends: libslp-memo (= ${Source-Version}), dlog-dev
+Description: library for memo(development package)
+
+Package: libslp-memo
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: library for memo
+
+Package: libslp-memo-dbg
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: library for memo
