@@ -3,7 +3,7 @@ Summary:    Memo DB interface library
 Version:	0.1.4
 Release:    1
 Group:      Libraries
-License:    Samsung Proprietary License
+License:    Flora Software License
 Source0:    libslp-memo-%{version}.tar.gz
 Source1001: packaging/libslp-memo.manifest 
 BuildRequires:  pkgconfig(dlog)
