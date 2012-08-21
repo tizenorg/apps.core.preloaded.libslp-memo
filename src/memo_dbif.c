@@ -1,19 +1,20 @@
 /*
-  * Copyright 2012  Samsung Electronics Co., Ltd
-  * 
-  * Licensed under the Flora License, Version 1.0 (the "License");
-  * you may not use this file except in compliance with the License.
-  * You may obtain a copy of the License at
-  * 
-  *     http://www.tizenopensource.org/license
-  * 
-  * Unless required by applicable law or agreed to in writing, software
-  * distributed under the License is distributed on an "AS IS" BASIS,
-  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  * See the License for the specific language governing permissions and
-  * limitations under the License.
-  */
-
+*
+* Copyright 2012  Samsung Electronics Co., Ltd
+*
+* Licensed under the Flora License, Version 1.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*    http://www.tizenopensource.org/license
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -183,7 +184,7 @@ MEMOAPI int memo_del_data(int id)
     retvm_if(db == NULL, -1, "DB Handle is null, need memo_init");
     retvm_if(id < 1, -1, "Invalid memo data ID");
     /* delete doodle */
-    snprintf(buf, 128, "/opt/apps/org.tizen.memo/data/doodle/%d.png", id);
+    snprintf(buf, 128, "/opt/apps/com.samsung.memo/data/doodle/%d.png", id);
     remove(buf);
     return remove_data(db, id);
 }
@@ -290,13 +291,13 @@ static void _on_data_change(keynode_t *node, void *user_data)
 MEMOAPI int memo_subscribe_change(void (*cb)(void *), void *user_data)
 {
     g_data_monitor = cb;
-    vconf_notify_key_changed(MEMO_VCONF_PATH, _on_data_change, user_data);
+    vconf_notify_key_changed(VCONFKEY_MEMO_DATA_CHANGE, _on_data_change, user_data);
     return 0;
 }
 
 MEMOAPI int memo_unsubscribe_change(void (*cb)(void *))
 {
-    vconf_ignore_key_changed(MEMO_VCONF_PATH, _on_data_change);
+    vconf_ignore_key_changed(VCONFKEY_MEMO_DATA_CHANGE, _on_data_change);
     g_data_monitor = NULL;
     return 0;
 }
@@ -311,13 +312,13 @@ MEMOAPI void memo_end_trans(void)
     int value = 0;
     trans_count--;
     if (trans_count == 0) {
-        if(vconf_get_int(MEMO_VCONF_PATH, &value)) {
+        if(vconf_get_int(VCONFKEY_MEMO_DATA_CHANGE, &value)) {
             LOGD("vconf_get_int FAIL\n");
         } else {
             if (value == 0) {
-                vconf_set_int(MEMO_VCONF_PATH, 1);
+                vconf_set_int(VCONFKEY_MEMO_DATA_CHANGE, 1);
             } else {
-                vconf_set_int(MEMO_VCONF_PATH, 0);
+                vconf_set_int(VCONFKEY_MEMO_DATA_CHANGE, 0);
             }
         }
     }

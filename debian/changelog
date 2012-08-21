@@ -1,7 +1,894 @@
 libslp-memo (0.1.4-20) unstable; urgency=low
 
-  * Change memo package path
-  * Git: apps/l/libslp-memo
-  * Tag: libslp-memo_0.1.4-20
+  * [Request]Modify the vconf key name and move the define to vconf-internal-keys.
+  * Git : slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-20
 
- -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 16 Jan 2012 13:24:15 +0800
+ -- Wei Hua <wei2012.hua@samsung.com>  Fri, 18 May 2012 10:59:00 +0800
+
+libslp-memo (0.1.4-19) unstable; urgency=low
+
+  * [Request]Replace heynoti with vconf due to the insecurity of heynoti.
+  * Git : slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-19
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Sat, 14 Jan 2012 11:37:21 +0800
+
+libslp-memo (0.1.4-18) unstable; urgency=low
+
+  * upload
+  * Git : slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-18
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 05 Dec 2011 11:38:13 +0800
+
+libslp-memo (0.1.4-17) unstable; urgency=low
+
+  * assume id of inserted record is max_rowid+1 is not legal, sqlite3_last_insert_rowid is safe
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-17
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Fri, 25 Nov 2011 14:22:33 +0800
+
+libslp-memo (0.1.4-16) unstable; urgency=low
+
+  * records synchronized from KIES may have no font info, add font_respect field to distinguish and install default font size/color to those records in that case
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-16
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Sat, 19 Nov 2011 10:32:50 +0800
+
+libslp-memo (0.1.4-15) unstable; urgency=low
+
+  * [fix bug]H0100135596, set default font size as 44
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-15
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Sat, 22 Oct 2011 13:29:24 +0800
+
+libslp-memo (0.1.4-14) unstable; urgency=low
+
+  * copyright update
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-14
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 19 Oct 2011 14:37:11 +0800
+
+libslp-memo (0.1.4-13) unstable; urgency=low
+
+  * unused postinst script
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-13
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Tue, 20 Sep 2011 15:22:08 +0800
+
+libslp-memo (0.1.4-12) unstable; urgency=low
+
+  * package size optimize
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-12
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Tue, 20 Sep 2011 09:00:09 +0800
+
+libslp-memo (0.1.4-11) unstable; urgency=low
+
+  * it's illegal to retrieve deleted data
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-11
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Tue, 06 Sep 2011 10:47:08 +0800
+
+libslp-memo (0.1.4-10) unstable; urgency=low
+
+  * upload
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-10
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Fri, 19 Aug 2011 13:55:24 +0800
+
+libslp-memo (0.1.4-9) unstable; urgency=low
+
+  * replace strcat with strncat
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-9
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Tue, 16 Aug 2011 14:33:49 +0800
+
+libslp-memo (0.1.4-8) unstable; urgency=low
+
+  * fix prevent issues
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-8
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Tue, 16 Aug 2011 11:02:59 +0800
+
+libslp-memo (0.1.4-7) unstable; urgency=low
+
+  * fix prevent issue and set default sort type as descend
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-7
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Tue, 26 Jul 2011 14:01:52 +0800
+
+libslp-memo (0.1.4-6) unstable; urgency=low
+
+  * upload
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-6
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 21 Jul 2011 10:47:01 +0800
+
+libslp-memo (0.1.4-5) unstable; urgency=low
+
+  * upload
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-5
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 20 Jul 2011 10:03:35 +0800
+
+libslp-memo (0.1.4-4) unstable; urgency=low
+
+  * add all data iterator
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-4
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Fri, 15 Jul 2011 10:39:52 +0800
+
+libslp-memo (0.1.4-3) unstable; urgency=low
+
+  * upload
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-3
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 13 Jul 2011 08:58:50 +0800
+
+libslp-memo (0.1.4-2) unstable; urgency=low
+
+  * add search function
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-2
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 11 Jul 2011 15:55:47 +0800
+
+libslp-memo (0.1.4-1) unstable; urgency=low
+
+  * add API prototype for smart search
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-1
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 11 Jul 2011 14:04:03 +0800
+
+libslp-memo (0.1.4-0) unstable; urgency=low
+
+  * fix svace issues
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.4-0
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Tue, 28 Jun 2011 15:22:40 +0800
+
+libslp-memo (0.1.3-99) unstable; urgency=low
+
+  * insert comment when add new record
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.3-99
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 15 Jun 2011 14:52:11 +0800
+
+libslp-memo (0.1.3-98) unstable; urgency=low
+
+  * upload
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.3-98
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 19 May 2011 15:10:05 +0800
+
+libslp-memo (0.1.3-97) unstable; urgency=low
+
+  * upload
+  * Git : git@git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.3-97
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 12 May 2011 08:35:33 +0800
+
+libslp-memo (0.1.3-96) unstable; urgency=low
+
+  * upload
+  * Git : git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.3-96
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 20 Apr 2011 14:09:33 +0800
+
+libslp-memo (0.1.3-95) unstable; urgency=low
+
+  * single instance of db
+  * Git : git_server:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.3-95
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Tue, 19 Apr 2011 09:12:47 +0800
+
+libslp-memo (0.1.3-94) unstable; urgency=low
+
+  * upload
+  * Git : 165.213.180.234:slp/apps/l/libslp-memo
+  * Tag : libslp-memo_0.1.3-94
+
+ -- canjiang lu <canjiang.lu@samsung.com>  Tue, 12 Apr 2011 16:30:54 +0800
+
+libslp-memo (0.1.3-93) unstable; urgency=low
+
+  * upload
+  * Git: git@165.213.180.234:slp/apps/l/libslp-memo.git
+  * Tag: libslp-memo_0.1.3-93
+
+ -- Yang Qing <qing_.yang@samsung.com>  Mon, 21 Mar 2011 11:14:42 +0800
+
+libslp-memo (0.1.3-92) unstable; urgency=low
+
+  * upload
+  * Git: git@165.213.180.234:slp/apps/l/libslp-memo.git
+  * Tag: libslp-memo_0.1.3-92
+
+ -- Yang Qing <qing_.yang@samsung.com>  Tue, 01 Mar 2011 09:35:30 +0800
+
+libslp-memo (0.1.3-91) unstable; urgency=low
+
+  * Modify for prevent testing.
+  * Git: git@165.213.180.234:slp/apps/l/libslp-memo.git
+  * Tag: libslp-memo_0.1.3-91
+
+ -- Yang Qing <qing_.yang@samsung.com>  Sat, 12 Feb 2011 09:07:21 +0800
+
+libslp-memo (0.1.3-90) unstable; urgency=low
+
+  * modify direcotries construct and files permission
+  * Git: git@165.213.180.234:slp/apps/l/libslp-memo.git
+  * Tag: libslp-memo_0.1.3-90
+
+ -- Yang Qing <qing_.yang@samsung.com>  Wed, 09 Feb 2011 14:28:21 +0800
+
+libslp-memo (0.1.3-89) unstable; urgency=low
+
+  * fix a bug about quotes
+  * Git: git@165.213.180.234:slp/apps/l/libslp-memo.git
+  * Tag: libslp-memo_0.1.3-89
+
+ -- Yang Qing <qing_.yang@samsung.com>  Sun, 06 Feb 2011 13:52:29 +0800
+
+libslp-memo (0.1.3-88) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-88
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Tue, 01 Feb 2011 15:22:22 +0800
+
+libslp-memo (0.1.3-87) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-87
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 27 Jan 2011 09:47:15 +0800
+
+libslp-memo (0.1.3-86) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-86
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 24 Jan 2011 10:32:18 +0800
+
+libslp-memo (0.1.3-85) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-85
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Sun, 23 Jan 2011 15:12:14 +0800
+
+libslp-memo (0.1.3-84) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-84
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Sat, 22 Jan 2011 17:12:38 +0800
+
+libslp-memo (0.1.3-83) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-83
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 20 Jan 2011 13:11:28 +0800
+
+libslp-memo (0.1.3-82) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-82
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 19 Jan 2011 14:55:44 +0800
+
+libslp-memo (0.1.3-81) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-81
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 19 Jan 2011 14:35:29 +0800
+
+libslp-memo (0.1.3-80) unstable; urgency=low
+
+  * save doodle_path in db
+  * Git: git@165.213.180.234:slp/apps/l/libslp-memo.git
+  * Tag: libslp-memo_0.1.3-80
+
+ -- Yang Qing <qing_.yang@samsung.com>  Tue, 18 Jan 2011 09:53:50 +0800
+
+libslp-memo (0.1.3-79) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-79
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 17 Jan 2011 08:56:39 +0800
+
+libslp-memo (0.1.3-78) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-78
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Fri, 14 Jan 2011 13:47:24 +0800
+
+libslp-memo (0.1.3-77) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-77
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 13 Jan 2011 09:48:36 +0800
+
+libslp-memo (0.1.3-76) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-76
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Tue, 11 Jan 2011 14:39:49 +0800
+
+libslp-memo (0.1.3-75) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-75
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 10 Jan 2011 10:31:57 +0800
+
+libslp-memo (0.1.3-74) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-74
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Sat, 08 Jan 2011 14:11:50 +0800
+
+libslp-memo (0.1.3-73) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-73
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Sat, 08 Jan 2011 11:19:30 +0800
+
+libslp-memo (0.1.3-72) unstable; urgency=low
+
+  * upload
+  * Git: git@git_server:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-72
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Fri, 07 Jan 2011 16:38:35 +0800
+
+libslp-memo (0.1.3-71) unstable; urgency=low
+
+  * upload
+  * Git: 165.213.180.234:slp/apps/l/libslp-memo
+  * Tag: libslp-memo_0.1.3-71
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 15 Dec 2010 09:07:18 +0800
+
+libslp-memo (0.1.3-70) unstable; urgency=low
+
+  * upload
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-70
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 29 Nov 2010 13:58:58 +0800
+
+libslp-memo (0.1.3-69) unstable; urgency=low
+
+  * add as-needed to LDFLAG
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-69
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 17 Nov 2010 14:44:32 +0800
+
+libslp-memo (0.1.3-68) unstable; urgency=low
+
+  * begin/end sync api policy updated
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-68
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 15 Nov 2010 10:56:33 +0800
+
+libslp-memo (0.1.3-67) unstable; urgency=low
+
+  * add sync begin/end API
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-67
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 11 Nov 2010 13:46:10 +0800
+
+libslp-memo (0.1.3-66) unstable; urgency=low
+
+  * enable debug package
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-66
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 11 Nov 2010 09:03:20 +0800
+
+libslp-memo (0.1.3-65) unstable; urgency=low
+
+  * add api to force change callback; remove change callback in delete api
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-65
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 08 Nov 2010 11:15:07 +0800
+
+libslp-memo (0.1.3-64) unstable; urgency=low
+
+  * enable callback function by heynoti_attach_handler
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-64
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Tue, 02 Nov 2010 10:39:51 +0800
+
+libslp-memo (0.1.3-63) unstable; urgency=low
+
+  * add api description of memo_subscribe_change/memo_unsubscribe_change
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-63
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 27 Oct 2010 13:28:06 +0800
+
+libslp-memo (0.1.3-62) unstable; urgency=low
+
+  * add subscribe/unsubscribe api for sync team
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-62
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 25 Oct 2010 10:22:24 +0800
+
+libslp-memo (0.1.3-61) unstable; urgency=low
+
+  * do not generate api docs
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-61
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 21 Oct 2010 14:16:26 +0800
+
+libslp-memo (0.1.3-60) unstable; urgency=low
+
+  * Lucene releated for smartsearch
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-60
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 11 Oct 2010 15:27:09 +0800
+
+libslp-memo (0.1.3-59) unstable; urgency=low
+
+  * upload
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-59
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 29 Sep 2010 11:10:57 +0800
+
+libslp-memo (0.1.3-58) unstable; urgency=low
+
+  * query modification after a specified time
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-58
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Sun, 26 Sep 2010 10:44:11 +0800
+
+libslp-memo (0.1.3-57) unstable; urgency=low
+
+  * notify external module when memo db changed
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-57
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Tue, 21 Sep 2010 08:47:56 +0800
+
+libslp-memo (0.1.3-56) unstable; urgency=low
+
+  * upload
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-56
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Fri, 17 Sep 2010 08:08:20 +0800
+
+libslp-memo (0.1.3-55) unstable; urgency=low
+
+  * add api description in memo-db.h
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-55
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 16 Sep 2010 14:57:16 +0800
+
+libslp-memo (0.1.3-54) unstable; urgency=low
+
+  * upload
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-54
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 16 Sep 2010 08:40:50 +0800
+
+libslp-memo (0.1.3-53) unstable; urgency=low
+
+  * upload
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-53
+
+ -- X536 Gong <x536.gong@samsung.com>  Wed, 15 Sep 2010 17:01:08 +0800
+
+libslp-memo (0.1.3-52) unstable; urgency=low
+
+  * optimize memo-db.h
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-52
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 15 Sep 2010 16:28:58 +0800
+
+libslp-memo (0.1.3-51) unstable; urgency=low
+
+  * extend record of memo
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-51
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 15 Sep 2010 13:36:57 +0800
+
+libslp-memo (0.1.3-50) unstable; urgency=low
+
+  * upload
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-50
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Tue, 14 Sep 2010 16:49:31 +0800
+
+libslp-memo (0.1.3-49) unstable; urgency=low
+
+  * upload
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-49
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 13 Sep 2010 17:03:32 +0800
+
+libslp-memo (0.1.3-48) unstable; urgency=low
+
+  * upload
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-48
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Sat, 11 Sep 2010 10:04:49 +0800
+
+libslp-memo (0.1.3-47) unstable; urgency=low
+
+  * remove sync db dependency
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-47 
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 02 Sep 2010 14:54:15 +0800
+
+libslp-memo (0.1.3-46) unstable; urgency=low
+
+  * remove doodle when delete data
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-46
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 02 Sep 2010 11:07:24 +0800
+
+libslp-memo (0.1.3-45) unstable; urgency=low
+
+  * remove open source dependency
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo/
+  * Tag: libslp-memo_0.1.3-45
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Sat, 28 Aug 2010 11:36:01 +0800
+
+libslp-memo (0.1.3-44) unstable; urgency=low
+
+  * Fix bug of make dummy memo data
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo
+  * Tag: libslp-memo_0.1.3-44
+
+ -- Yang Qing <qing_.yang@samsung.com>  Tue, 03 Aug 2010 13:02:34 +0800
+
+libslp-memo (0.1.3-43) unstable; urgency=low
+
+  * Fix build error
+  * Git: 165.213.180.234:/git/slp/apps/libslp-memo
+  * Tag: libslp-memo_0.1.3-43 
+
+ -- Zhibin Zhou <zhibin.zhou@samsung.com>  Sat, 31 Jul 2010 11:28:13 +0800
+
+libslp-memo (0.1.3-42) unstable; urgency=low
+
+  * Update DAC policy
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-42 
+
+ -- Zhibin Zhou <zhibin.zhou@samsung.com>  Sat, 24 Jul 2010 10:15:25 +0800
+
+libslp-memo (0.1.3-41) unstable; urgency=low
+
+  * re-upload
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-41
+
+ -- Newton Lee <newton.lee@samsung.com>  Thu, 15 Jul 2010 11:28:52 +0900
+
+libslp-memo (0.1.3-40) unstable; urgency=low
+
+  * repackage
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-40
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 30 Jun 2010 05:33:28 +0800
+
+libslp-memo (0.1.3-39) unstable; urgency=low
+
+  * repackage for dlog update
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-39
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 16 Jun 2010 04:21:49 +0800
+
+libslp-memo (0.1.3-38) unstable; urgency=low
+
+  * Add .memo.db-journal file
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-38
+
+ -- Zhou Zhibin <zhibin.zhou@samsung.com>  Tue, 15 Jun 2010 11:40:15 +0800
+
+libslp-memo (0.1.3-37) unstable; urgency=low
+
+  * Change to new dlog API
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-37 
+
+ -- Zhou Zhibin <zhibin.zhou@samsung.com>  Mon, 14 Jun 2010 16:22:58 +0800
+
+libslp-memo (0.1.3-36) unstable; urgency=low
+
+  * Change to new dlog API
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-36 
+
+ -- Zhou Zhibin <zhibin.zhou@samsung.com>  Sat, 12 Jun 2010 16:27:47 +0800
+
+libslp-memo (0.1.3-35) unstable; urgency=low
+
+  * Add owner and permission control for .memo.db-journal
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-35
+
+ -- Zhou Zhibin <zhibin.zhou@samsung.com>  Wed, 09 Jun 2010 09:17:28 +0800
+
+libslp-memo (0.1.3-34) unstable; urgency=low
+
+  * Update changlog
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-34 
+
+ -- Zhou Zhibin <zhibin.zhou@samsung.com>  Fri, 21 May 2010 09:41:33 +0800
+
+libslp-memo (0.1.3-33) unstable; urgency=low
+ 
+  * Remove DAC for .so
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-32
+
+ -- Zhou Zhibin <zhibin.zhou@samsung.com>  Thu, 20 May 2010 14:11:54 +0800
+
+libslp-memo (0.1.3-32) unstable; urgency=low
+
+  * Update maintainer in control
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-32
+ 
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Thu, 20 May 2010 11:06:42 +0800
+
+libslp-memo (0.1.3-31) unstable; urgency=low
+
+  * Apply security policy to direcotry /opt/dbspace
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-31
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Mon, 17 May 2010 09:17:24 +0800
+
+libslp-memo (0.1.3-30) unstable; urgency=low
+
+  * Apply security policy
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-30 
+
+ -- Canjiang Lu <canjiang.lu@samsung.com>  Wed, 12 May 2010 10:26:17 +0800
+
+libslp-memo (0.1.3-29) unstable; urgency=low
+
+  * Remove GetTimeZone function
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-29
+
+ -- Zhibin Zhou <zhibin.zhou@samsung.com>  Mon, 19 Apr 2010 13:37:08 +0800
+
+libslp-memo (0.1.3-28) unstable; urgency=low
+
+  * Update version
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-28
+
+ -- Zhibin Zhou <zhibin.zhou@samsung.com>  Fri, 16 Apr 2010 17:39:48 +0800
+
+libslp-memo (0.1.3-21) unstable; urgency=low
+
+  * Change file permission and owner for DAC
+  * Git: 165.213.180.234:/git/slp2.0/slp2.0-pkgs/libslp-memo-0
+  * Tag: libslp-memo_0.1.3-21
+
+ -- Zhibin Zhou <zhibin.zhou@samsung.com>  Fri, 16 Apr 2010 11:30:00 +0800
+
+libslp-memo (0.1.3-20) unstable; urgency=low
+
+  * Modify list order (Lastest memo will be listed on top)
+  * Add new API : memo_create_data_ex()
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Tue, 30 Mar 2010 17:43:03 +0900
+
+libslp-memo (0.1.3-19) unstable; urgency=low
+
+  * Upload tag: Toolchain Upgrade
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Thu, 25 Mar 2010 14:28:56 +0900
+
+libslp-memo (0.1.3-18) unstable; urgency=low
+
+  * Modify reference count for multiple db open/close
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Mon, 22 Mar 2010 17:20:21 +0900
+
+libslp-memo (0.1.3-17) unstable; urgency=low
+
+  * Modify error handling code (Requested by App-fwk)
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Tue, 16 Mar 2010 14:18:24 +0900
+
+libslp-memo (0.1.3-16) unstable; urgency=low
+
+  * Modify sync-db code (Requested by App-fwk)
+  * Add API for test data (Requested by test team)
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Thu, 11 Mar 2010 11:28:20 +0900
+
+libslp-memo (0.1.3-15) unstable; urgency=low
+
+  * fix include package
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Wed, 03 Mar 2010 13:56:27 +0900
+
+libslp-memo (0.1.3-14) unstable; urgency=low
+
+  * fix possible bug (DB finalization)
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Wed, 03 Mar 2010 11:33:04 +0900
+
+libslp-memo (0.1.3-13) unstable; urgency=low
+
+  * Apply Sync-db
+  * fix header overite problem
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Tue, 23 Feb 2010 19:01:36 +0900
+
+libslp-memo (0.1.3-12) unstable; urgency=low
+
+  * remove dependency for libslp-memo-include-dev
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Tue, 23 Feb 2010 16:26:09 +0900
+
+libslp-memo (0.1.3-11) unstable; urgency=low
+
+  * add header file package "libslp-memo-include-dev" for sync-db
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Tue, 23 Feb 2010 14:59:06 +0900
+
+libslp-memo (0.1.3-10) unstable; urgency=low
+
+  * fix duplicated db file
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Fri, 19 Feb 2010 20:32:53 +0900
+
+libslp-memo (0.1.3-9) unstable; urgency=low
+
+  * Apply db-util
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Fri, 19 Feb 2010 13:52:09 +0900
+
+libslp-memo (0.1.3-8) unstable; urgency=low
+
+  * Add APIs
+  - struct memo_data* memo_get_latest_data(void)
+  - int memo_get_count(int *count)
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Tue, 09 Feb 2010 09:16:20 +0900
+
+libslp-memo (0.1.3-7) unstable; urgency=low
+
+  * Remove prefix SLP
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Wed, 27 Jan 2010 13:58:32 +0900
+
+libslp-memo (0.1.3-6) unstable; urgency=low
+
+  * Add color column to db
+
+ -- Jae-Yong Lee <jaeyong911.lee@samsung.com>  Wed, 13 Jan 2010 16:14:45 +0900
+
+libslp-memo (0.1.3-4) unstable; urgency=low
+
+  * Modified control maintainer
+
+ -- Jaeyong Lee <jaeyong911.lee@samsung.com>  Tue, 12 Jan 2010 18:15:03 +0900
+
+libslp-memo (0.1.3-3) unstable; urgency=low
+
+  * Change prefix to SLP
+
+ -- Byeongha Cho <byeongha.cho@samsung.com>  Fri, 20 Nov 2009 19:53:22 +0900
+
+libslp-memo (0.1.3-2) unstable; urgency=low
+
+  * Fill missing item in changelog
+
+ -- Byeongha Cho <byeongha.cho@samsung.com>  Tue, 17 Nov 2009 16:40:54 +0900
+
+libslp-memo (0.1.3-1) unstable; urgency=low
+
+  * Update copyright
+
+ -- Byeongha Cho <byeongha.cho@samsung.com>  Tue, 17 Nov 2009 15:46:54 +0900
+
+libslp-memo (0.1.3) unstable; urgency=low
+
+  * Change dependancy list
+
+ -- Byeongha Cho <byeongha.cho@samsung.com>  Tue, 17 Nov 2009 15:44:54 +0900
+
+libslp-memo (0.1.2) unstable; urgency=low
+
+  * add pkgconfig file
+
+ -- Byeongha Cho <byeongha.cho@samsung.com>  Fri, 13 Nov 2009 22:28:00 +0900
+
+libslp-memo (0.1.1) unstable; urgency=low
+
+  * Correcting dependancy error 
+
+ -- Byeongha Cho <byeongha.cho@samsung.com>  Fri, 13 Nov 2009 15:22:03 +0900
+
+libslp-memo (0.1.0) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Byeongha Cho <byeongha.cho@samsung.com>  Thu, 12 Nov 2009 14:18:02 +0900

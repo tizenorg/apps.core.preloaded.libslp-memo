@@ -1,19 +1,20 @@
 /*
-  * Copyright 2012  Samsung Electronics Co., Ltd
-  * 
-  * Licensed under the Flora License, Version 1.0 (the "License");
-  * you may not use this file except in compliance with the License.
-  * You may obtain a copy of the License at
-  * 
-  *     http://www.tizenopensource.org/license
-  * 
-  * Unless required by applicable law or agreed to in writing, software
-  * distributed under the License is distributed on an "AS IS" BASIS,
-  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  * See the License for the specific language governing permissions and
-  * limitations under the License.
-  */
-
+*
+* Copyright 2012  Samsung Electronics Co., Ltd
+*
+* Licensed under the Flora License, Version 1.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*    http://www.tizenopensource.org/license
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -72,7 +73,7 @@ static inline void _make_qry_i_cd(char *query, int len, struct memo_data *cd)
         KEY_CONTENT, db_content_truncate(cd->content),
         KEY_FONT_RESPECT, cd->font_respect,
         KEY_FONT_SIZE, ((cd->font_respect ? cd->font_size : 44)),
-        KEY_FONT_COLOR, (cd->font_respect ? cd->font_color : 0XFFFFFFFF),
+        KEY_FONT_COLOR, (cd->font_respect ? cd->font_color : 0xff000000),
         KEY_COMMENT, cd->comment,
         KEY_DOODLE_PATH, cd->doodle_path,
         KEY_INPUT_END);
@@ -147,7 +148,7 @@ static inline void _make_qry_u_cd(char *query, int len, struct memo_data *cd)
         KEY_CONTENT, db_content_truncate(cd->content),
         KEY_FONT_RESPECT, cd->font_respect,
         KEY_FONT_SIZE, ((cd->font_respect ? cd->font_size : 44)),
-        KEY_FONT_COLOR, (cd->font_respect ? cd->font_color : 0XFFFFFFFF),
+        KEY_FONT_COLOR, (cd->font_respect ? cd->font_color : 0xff000000),
         KEY_COMMENT, cd->comment,
         KEY_DOODLE_PATH, cd->doodle_path,
         KEY_INPUT_END);
@@ -545,31 +546,6 @@ static const char *_get_sort_exp(MEMO_SORT_TYPE sort)
     return exp;
 }
 
-/*
-int escape_like_pattern(const char *src, char * const dest, int dest_size)
-{
-       int s_pos=0, d_pos=0;
-
-       if (NULL == src) {
-               ERR("The parameter(src) is NULL");
-               dest[d_pos] = '\0';
-               return 0;
-       }
-
-       while (src[s_pos] != 0) {
-               if (dest_size == d_pos - 1)
-                       break;
-               if ('%' == src[s_pos] || '_' == src[s_pos]) {
-                       dest[d_pos++] = '\\';
-               }
-               dest[d_pos++] = src[s_pos++];
-       }
-
-       dest[d_pos] = '\0';
-
-       return d_pos;
-}
-*/
 int search_data(sqlite3 *db, const char *search_str, int limit, int offset, MEMO_SORT_TYPE sort,
     memo_data_iterate_cb_t cb, void *user_data)
 {
@@ -579,21 +555,17 @@ int search_data(sqlite3 *db, const char *search_str, int limit, int offset, MEMO
     int rc = 0;
     sqlite3_stmt *stmt = NULL;
     char query[QUERY_MAXLEN] = {0};
-    char temp[QUERY_MAXLEN + 1] = {0};
     int idx = 0;
     memo_data_t *md = (memo_data_t *)calloc(1, sizeof(memo_data_t));
     retvm_if(md == NULL, -1, "calloc failed");
 
-    if(0 != strcmp(search_str, ""))
-        sprintf(temp, "/%s", search_str);
-
     snprintf(query, sizeof(query),
         "SELECT id, content, modi_time, doodle, comment, font_respect, font_size, font_color "
         "FROM memo WHERE delete_time = -1 AND "
-        "CASE WHEN comment IS NOT NULL THEN comment like '%%%s%%' ESCAPE '/' "
-        "ELSE content LIKE '%%%s%%' ESCAPE '/' END "
+        "CASE WHEN comment IS NOT NULL THEN comment like '%%%s%%' "
+        "ELSE content LIKE '%%%s%%' END "
         "ORDER BY %s LIMIT %d OFFSET %d",
-        temp, temp, _get_sort_exp(sort), limit, offset);
+        search_str, search_str, _get_sort_exp(sort), limit, offset);
     LOGD("[query] : %s\n", query);
     rc = sqlite3_prepare(db, query, -1, &stmt, NULL);
     if ((rc == SQLITE_OK) && (stmt != NULL)) {
