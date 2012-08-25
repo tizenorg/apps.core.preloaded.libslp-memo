@@ -41,7 +41,7 @@ rm -rf %{buildroot}
 %post
 mkdir -p /opt/dbspace
 sqlite3 /opt/dbspace/.memo.db 'PRAGMA journal_mode = PERSIST;
-CREATE TABLE if not exists memo ( id INTEGER PRIMARY KEY autoincrement, content TEXT, written_time TEXT, create_time INTEGER, modi_time INTEGER, delete_time INTEGER, doodle INTEGER, color INTEGER, comment TEXT, favorite INTEGER, font_size INTEGER, font_color INTEGER, doodle_path TEXT );
+CREATE TABLE if not exists memo ( id INTEGER PRIMARY KEY autoincrement, content TEXT, written_time TEXT, create_time INTEGER, modi_time INTEGER, delete_time INTEGER, doodle INTEGER, color INTEGER, comment TEXT, favorite INTEGER,font_respect INTEGER, font_size INTEGER, font_color INTEGER, doodle_path TEXT );
                               '
 
 # Change file owner
