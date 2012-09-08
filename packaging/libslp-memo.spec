@@ -45,8 +45,8 @@ CREATE TABLE if not exists memo ( id INTEGER PRIMARY KEY autoincrement, content 
                               '
 
 # Change file owner
-chown :db_memo /opt/dbspace/.memo.db
-chown :db_memo /opt/dbspace/.memo.db-journal
+chown :5000 /opt/dbspace/.memo.db
+chown :5000 /opt/dbspace/.memo.db-journal
 
 # Change file permissions
 chmod 660  /opt/dbspace/.memo.db
