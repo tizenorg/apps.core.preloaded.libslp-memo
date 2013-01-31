@@ -307,7 +307,7 @@ struct memo_operation_list* get_operation_list(sqlite3 *db, time_t stamp)
     char query[QUERY_MAXLEN];
     int rc;
     sqlite3_stmt *stmt;
-    time_t create_tm, mod_tm, del_tm;
+    time_t create_tm, del_tm;
     struct memo_operation_list *t = NULL;
     struct memo_operation_list *cd = NULL;
     int idx;
@@ -332,7 +332,7 @@ struct memo_operation_list* get_operation_list(sqlite3 *db, time_t stamp)
         }
         t->id = INT(stmt, idx++);
         create_tm = INT(stmt, idx++);
-        mod_tm = INT(stmt, idx++);
+        INT(stmt, idx++);
         del_tm = INT(stmt, idx++);
         if (del_tm != -1) {
             t->operation = MEMO_OPERATION_DELETE;

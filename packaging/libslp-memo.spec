@@ -1,10 +1,9 @@
-#sbs-git:slp/apps/l/libslp-memo libslp-memo 0.1.4 e4fc8040f9e5243551bdaa7748006516d5c94e90
 Name:       libslp-memo
 Summary:    Memo DB interface library
-Version: 0.1.5
+Version:    0.1.5
 Release:    1
 Group:      TO_BE/FILLED_IN
-License:    TO BE FILLED IN
+License:    Flora
 Source0:    libslp-memo-%{version}.tar.gz
 BuildRequires:  pkgconfig(dlog)
 BuildRequires:  pkgconfig(heynoti)
@@ -29,13 +28,12 @@ Development files for %{name}
 %setup -q
 
 %build
-export LDFLAGS+=" -Wl,--rpath=/usr/lib -Wl,--as-needed -Wl,--hash-style=both"
-cmake . -DCMAKE_INSTALL_PREFIX=/usr
+export LDFLAGS+=" -Wl,--rpath=%{_libdir} -Wl,--as-needed -Wl,--hash-style=both"
+%cmake .
 
 make %{?jobs:-j%jobs}
 
 %install
-rm -rf %{buildroot}
 %make_install
 
 %post
@@ -62,4 +60,3 @@ chmod 660  /opt/dbspace/.memo.db-journal
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/memo.pc
 %{_includedir}/*.h
-
