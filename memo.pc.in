@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=@PREFIX@
+exec_prefix=@EXEC_PREFIX@
+libdir=@LIBDIR@
+includedir=@INCLUDEDIR@
+
+Name: libmemo
+Description: Memo DB interface library
+Version: @VERSION@
+Requires: 
+Libs: -L${libdir} -lmemo
+Cflags: -I${includedir}
