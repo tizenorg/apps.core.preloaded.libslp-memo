@@ -1,11 +1,12 @@
 <manifest>
 	<define>
 		<domain name="libslp-memo"/>
-		<provide>
-			<label name="libslp-memo::db"/>
-		</provide>
 	</define>
+        <assign>
+                <filesystem path="/usr/lib/*" label="_" />
+        </assign>
 	<request>
-		<domain name="_" />
+                <domain name="libslp-memo"/>
 	</request>
 </manifest>
+
