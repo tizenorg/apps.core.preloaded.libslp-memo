@@ -1,0 +1,8 @@
+Change-Id: Ia14fb7e087beadbdc2da43a3f58feeb7fed47b73
+Code-Review+2: Anas Nashif
+Verified+1: Victor Hakoun <victor.hakoun@eurogiciel.fr>
+Submitted-by: Anas Nashif
+Submitted-at: Thu, 06 Jun 2013 08:34:17 -0700
+Reviewed-on: https://review.tizen.org/gerrit/3868
+Project: apps/core/preloaded/libslp-memo
+Branch: refs/heads/tizen
