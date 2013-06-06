@@ -2,7 +2,7 @@ Name:       libslp-memo
 Summary:    Memo DB interface library
 Version:    0.1.5
 Release:    1
-Group:      TO_BE/FILLED_IN
+Group:      Applications/Libraries
 License:    Flora
 Source0:    libslp-memo-%{version}.tar.gz
 BuildRequires:  pkgconfig(dlog)
