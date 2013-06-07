@@ -57,6 +57,8 @@ chown :5000 /opt/dbspace/.memo.db-journal
 chmod 660  /opt/dbspace/.memo.db
 chmod 660  /opt/dbspace/.memo.db-journal
 
+%postun -p /sbin/ldconfig
+
 %files
 %defattr(-,root,root,-)
 %manifest libslp-memo.manifest
