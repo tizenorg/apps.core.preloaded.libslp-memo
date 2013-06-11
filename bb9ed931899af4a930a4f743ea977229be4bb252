@@ -1,0 +1,8 @@
+Change-Id: I7e586b34a4bbff6aa395c93eb604ce7684ccbf06
+Code-Review+2: Anas Nashif <anas.nashif@intel.com>
+Verified+1: Rusty Lynch <rusty.lynch@intel.com>
+Submitted-by: Anas Nashif <anas.nashif@intel.com>
+Submitted-at: Tue, 11 Jun 2013 11:03:00 -0700
+Reviewed-on: https://review.tizen.org/gerrit/3873
+Project: apps/core/preloaded/libslp-memo
+Branch: refs/heads/tizen
