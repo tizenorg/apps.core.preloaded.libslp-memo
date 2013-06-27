@@ -5,6 +5,7 @@ Release:    1
 Group:      Applications/Libraries
 License:    Flora
 Source0:    libslp-memo-%{version}.tar.gz
+Source1001: 	libslp-memo.manifest
 BuildRequires:  pkgconfig(dlog)
 BuildRequires:  pkgconfig(heynoti)
 BuildRequires:  pkgconfig(db-util)
@@ -26,6 +27,7 @@ Development files for %{name}
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 export LDFLAGS+=" -Wl,--rpath=%{_libdir} -Wl,--as-needed -Wl,--hash-style=both"
@@ -60,11 +62,13 @@ chmod 660  /opt/dbspace/.memo.db-journal
 %postun -p /sbin/ldconfig
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %manifest libslp-memo.manifest
 %{_libdir}/*.so.*
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/memo.pc
