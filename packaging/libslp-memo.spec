@@ -46,7 +46,7 @@ CREATE TABLE if not exists memo ( id INTEGER PRIMARY KEY autoincrement, content 
 
 if [ -f /usr/lib/rpm-plugins/msm.so ]
 then
-chsmack -a 'memo::db' /opt/usr/dbspace/.memo.db*
+#chsmack -a 'memo::db' /opt/usr/dbspace/.memo.db*
 fi
 
 
