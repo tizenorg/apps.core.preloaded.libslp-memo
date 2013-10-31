@@ -534,6 +534,12 @@ static const char *_get_sort_exp(MEMO_SORT_TYPE sort)
     case MEMO_SORT_CREATE_TIME_ASC:
         exp = "create_time ASC";
         break;
+    case MEMO_SORT_MODIFIED_TIME:
+        exp = "modi_time DESC";
+        break;
+    case MEMO_SORT_MODIFIED_TIME_ASC:
+        exp = "modi_time ASC";
+        break;
     case MEMO_SORT_TITLE:
         exp = "CASE WHEN comment IS NOT NULL THEN comment ELSE content END DESC";
         break;

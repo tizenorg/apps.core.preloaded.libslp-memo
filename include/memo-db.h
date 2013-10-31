@@ -95,6 +95,8 @@ typedef enum {
     MEMO_SORT_INVALID = -1,
     MEMO_SORT_CREATE_TIME, /* descend */
     MEMO_SORT_CREATE_TIME_ASC,
+    MEMO_SORT_MODIFIED_TIME, /* descend */
+    MEMO_SORT_MODIFIED_TIME_ASC,
     MEMO_SORT_TITLE, /* descend */
     MEMO_SORT_TITLE_ASC,
     MEMO_SORT_TYPES,
