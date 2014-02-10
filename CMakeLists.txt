@@ -25,7 +25,7 @@ SET(SRCS src/db.c
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include)
 
 INCLUDE(FindPkgConfig)
-pkg_check_modules(pkgs REQUIRED db-util dlog vconf)
+pkg_check_modules(pkgs REQUIRED db-util dlog vconf libtzplatform-config)
 
 FOREACH(flag ${pkgs_CFLAGS})
 	SET(EXTRA_CFLAGS "${EXTRA_CFLAGS} ${flag} -Wall")

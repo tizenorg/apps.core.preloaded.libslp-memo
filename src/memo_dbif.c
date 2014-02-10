@@ -23,6 +23,9 @@
 #include <fcntl.h>
 #include <vconf.h>
 
+/* For multi-user support */
+#include <tzplatform_config.h>
+
 #include "memo-log.h"
 #include "memo-db.h"
 #include "db.h"
@@ -31,8 +34,10 @@
 #define MEMOAPI __attribute__ ((visibility("default")))
 #endif
 
-#define DB_PREFIX_PATH  "/opt/dbspace"
+#define DB_PREFIX_PATH tzplatform_getenv(TZ_SYS_DB)
 #define DBNAME ".memo.db"
+
+#define USER_APPS_DIR tzplatform_getenv(TZ_USER_APP)
 
 static void (*g_data_monitor) (void *) = NULL;
 static int trans_count = 0;
@@ -186,7 +191,7 @@ MEMOAPI int memo_del_data(int id)
     memo_data_t *md = memo_get_data(id);
     /* delete doodle */
     if(md->has_doodle == 1) {
-	    snprintf(buf, 128, "/opt/usr/apps/org.tizen.memo/data/doodle/%d.png", id);
+	    snprintf(buf, 128, "%s/org.tizen.memo/data/doodle/%d.png", USER_APPS_DIR, id);
 	    if(remove(buf) != 0) {
 		ERR("Remove file error\n");
 		memo_free_data(md);
