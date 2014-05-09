@@ -54,6 +54,8 @@ chown :%{TZ_SYS_USER_GROUP} %{TZ_SYS_DB}/.memo.db-journal
 chmod 660  %{TZ_SYS_DB}/.memo.db
 chmod 660  %{TZ_SYS_DB}/.memo.db-journal
 
+chsmack -a 'User' %{TZ_SYS_DB}/.memo.db*
+
 %postun -p /sbin/ldconfig
 
 %files
