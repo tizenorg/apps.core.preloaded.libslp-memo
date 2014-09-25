@@ -18,7 +18,7 @@ BuildRequires:  cmake
 library for memo(development package)
 
 %package devel
-Summary:    Development files for %{name}
+Summary:    Development for %{name}
 Group:      Development/Libraries
 Requires:   %{name} = %{version}-%{release}
 
@@ -30,10 +30,9 @@ Development files for %{name}
 cp %{SOURCE1001} .
 
 %build
-export LDFLAGS+=" -Wl,--rpath=%{_libdir} -Wl,--as-needed -Wl,--hash-style=both"
+export LDFLAGS="${LDFLAGS} -Wl,--rpath=%{_libdir} -Wl,--as-needed -Wl,--hash-style=both"
 %cmake .
-
-make %{?jobs:-j%jobs}
+%__make %{?_smp_mflags}
 
 %install
 %make_install
@@ -44,7 +43,6 @@ sqlite3 %{TZ_SYS_DB}/.memo.db 'PRAGMA journal_mode = PERSIST;
 CREATE TABLE if not exists memo ( id INTEGER PRIMARY KEY autoincrement, content TEXT, written_time TEXT, create_time INTEGER, modi_time INTEGER, delete_time INTEGER, doodle INTEGER, color INTEGER, comment TEXT, favorite INTEGER,font_respect INTEGER, font_size INTEGER, font_color INTEGER, doodle_path TEXT );
                               '
 /sbin/ldconfig
-
 
 # Change file owner
 chown :%{TZ_SYS_USER_GROUP} %{TZ_SYS_DB}/.memo.db
@@ -61,7 +59,6 @@ chsmack -a 'User' %{TZ_SYS_DB}/.memo.db*
 %files
 %manifest %{name}.manifest
 %defattr(-,root,root,-)
-%manifest libslp-memo.manifest
 %{_libdir}/*.so.*
 
 %files devel
