@@ -3,7 +3,7 @@ Summary:    Memo DB interface library
 Version:    0.1.5
 Release:    0
 Group:      Application Framework/Libraries
-License:    Flora
+License:    Apache v2.0
 Source0:    libslp-memo-%{version}.tar.gz
 Source1001: libslp-memo.manifest
 BuildRequires:  pkgconfig(dlog)
