@@ -1,20 +1,20 @@
 /*
-*
-* Copyright 2012  Samsung Electronics Co., Ltd
-*
-* Licensed under the Flora License, Version 1.1 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-*    http://floralicense.org/license/
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
+ *
+ * Copyright 2012 - 2014  Samsung Electronics Co., Ltd
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -69,14 +69,14 @@ static int _create_table(sqlite3 *db)
 static inline void _make_qry_i_cd(char *query, int len, struct memo_data *cd)
 {
     char * buf = db_make_insert_query(
-        KEY_ITEM_MODE, (void *)cd->has_doodle,
-        KEY_CONTENT, db_content_truncate(cd->content),
-        KEY_FONT_RESPECT, cd->font_respect,
-        KEY_FONT_SIZE, ((cd->font_respect ? cd->font_size : 44)),
-        KEY_FONT_COLOR, (cd->font_respect ? cd->font_color : 0xff000000),
-        KEY_COMMENT, cd->comment,
-        KEY_DOODLE_PATH, cd->doodle_path,
-        KEY_INPUT_END);
+            KEY_ITEM_MODE, (void *)cd->has_doodle,
+            KEY_CONTENT, db_content_truncate(cd->content),
+            KEY_FONT_RESPECT, cd->font_respect,
+            KEY_FONT_SIZE, ((cd->font_respect ? cd->font_size : 44)),
+            KEY_FONT_COLOR, (cd->font_respect ? cd->font_color : 0xff000000),
+            KEY_COMMENT, cd->comment,
+            KEY_DOODLE_PATH, cd->doodle_path,
+            KEY_INPUT_END);
     if (buf != NULL) {
         snprintf(query, len, "%s", buf);
         free(buf);
@@ -144,14 +144,14 @@ int remove_data(sqlite3 *db, int cid)
 static inline void _make_qry_u_cd(char *query, int len, struct memo_data *cd)
 {
     char *buf = db_make_update_query(cd->id,
-        KEY_FAVORITE, (void *)cd->favorite,
-        KEY_CONTENT, db_content_truncate(cd->content),
-        KEY_FONT_RESPECT, cd->font_respect,
-        KEY_FONT_SIZE, ((cd->font_respect ? cd->font_size : 44)),
-        KEY_FONT_COLOR, (cd->font_respect ? cd->font_color : 0xff000000),
-        KEY_COMMENT, cd->comment,
-        KEY_DOODLE_PATH, cd->doodle_path,
-        KEY_INPUT_END);
+            KEY_FAVORITE, (void *)cd->favorite,
+            KEY_CONTENT, db_content_truncate(cd->content),
+            KEY_FONT_RESPECT, cd->font_respect,
+            KEY_FONT_SIZE, ((cd->font_respect ? cd->font_size : 44)),
+            KEY_FONT_COLOR, (cd->font_respect ? cd->font_color : 0xff000000),
+            KEY_COMMENT, cd->comment,
+            KEY_DOODLE_PATH, cd->doodle_path,
+            KEY_INPUT_END);
     if (buf != NULL) {
         snprintf(query, len, "%s", buf);
         free(buf);
@@ -296,8 +296,8 @@ struct memo_data_list* get_all_data_list(sqlite3 *db)
     retvm_if(db == NULL, NULL, "db handler is null");
 
     snprintf(query, sizeof(query),    "select "
-                                    "id, content, modi_time, doodle, color, comment, favorite, font_respect, font_size, font_color, doodle_path "
-                                    "from memo where delete_time = -1 order by create_time asc");
+            "id, content, modi_time, doodle, color, comment, favorite, font_respect, font_size, font_color, doodle_path "
+            "from memo where delete_time = -1 order by create_time asc");
 
     return _get_data_list(db, query);
 }
@@ -314,8 +314,8 @@ struct memo_operation_list* get_operation_list(sqlite3 *db, time_t stamp)
 
     retvm_if(db == NULL, NULL, "db handler is null");
     snprintf(query, sizeof(query),    "select "
-                                    "id, create_time, modi_time, delete_time "
-                                    "from memo where modi_time > %ld", stamp);
+            "id, create_time, modi_time, delete_time "
+            "from memo where modi_time > %ld", stamp);
     rc = sqlite3_prepare(db, query, -1, &stmt, NULL);
     if (SQLITE_OK != rc || NULL == stmt) {
         ERR("SQL error\n");
@@ -441,12 +441,12 @@ void db_fini(sqlite3 *db)
 }
 
 /*
-* @fn int get_latest_data(sqlite3 *db, struct memo_data *cd)
-* @brif Get latest memo data from db
-*
-* Request by Widget Memo application.
-* Added by jy.Lee (jaeyong911.lee@samsung.com)
-*/
+ * @fn int get_latest_data(sqlite3 *db, struct memo_data *cd)
+ * @brif Get latest memo data from db
+ *
+ * Request by Widget Memo application.
+ * Added by jy.Lee (jaeyong911.lee@samsung.com)
+ */
 int get_data_count(sqlite3 *db, int *count)
 {
     int rc;
@@ -490,7 +490,7 @@ int get_data_count(sqlite3 *db, int *count)
  * @return    number of retrieved indexes or number of records
  *
  * @remarks   If the number of indexes storded in database is larger than len,
-              the trailing indexes will be omitted.
+ the trailing indexes will be omitted.
  *
  */
 int get_indexes(sqlite3 *db, int *aIndex, int len, MEMO_SORT_TYPE sort)
@@ -547,7 +547,7 @@ static const char *_get_sort_exp(MEMO_SORT_TYPE sort)
 }
 
 int search_data(sqlite3 *db, const char *search_str, int limit, int offset, MEMO_SORT_TYPE sort,
-    memo_data_iterate_cb_t cb, void *user_data)
+        memo_data_iterate_cb_t cb, void *user_data)
 {
     retvm_if(db == NULL, -1, "db handler is NULL");
     retvm_if(search_str == NULL, -1, "search string is NULL");
@@ -560,12 +560,12 @@ int search_data(sqlite3 *db, const char *search_str, int limit, int offset, MEMO
     retvm_if(md == NULL, -1, "calloc failed");
 
     snprintf(query, sizeof(query),
-        "SELECT id, content, modi_time, doodle, comment, font_respect, font_size, font_color "
-        "FROM memo WHERE delete_time = -1 AND "
-        "CASE WHEN comment IS NOT NULL THEN comment like '%%%s%%' "
-        "ELSE content LIKE '%%%s%%' END "
-        "ORDER BY %s LIMIT %d OFFSET %d",
-        search_str, search_str, _get_sort_exp(sort), limit, offset);
+            "SELECT id, content, modi_time, doodle, comment, font_respect, font_size, font_color "
+            "FROM memo WHERE delete_time = -1 AND "
+            "CASE WHEN comment IS NOT NULL THEN comment like '%%%s%%' "
+            "ELSE content LIKE '%%%s%%' END "
+            "ORDER BY %s LIMIT %d OFFSET %d",
+            search_str, search_str, _get_sort_exp(sort), limit, offset);
     LOGD("[query] : %s\n", query);
     rc = sqlite3_prepare(db, query, -1, &stmt, NULL);
     if ((rc == SQLITE_OK) && (stmt != NULL)) {
@@ -601,9 +601,9 @@ int all_data(sqlite3 *db, memo_data_iterate_cb_t cb, void *user_data)
     retvm_if(md == NULL, -1, "calloc failed");
 
     rc = sqlite3_prepare(db,
-        "SELECT id, content, modi_time, doodle, comment, font_respect, font_size, font_color "
-        "FROM memo where delete_time = -1 order by create_time desc",
-        -1, &stmt, NULL);
+            "SELECT id, content, modi_time, doodle, comment, font_respect, font_size, font_color "
+            "FROM memo where delete_time = -1 order by create_time desc",
+            -1, &stmt, NULL);
     if ((rc == SQLITE_OK) && (stmt != NULL)) {
         rc = sqlite3_step(stmt);
         while((rc==SQLITE_ROW)) {
